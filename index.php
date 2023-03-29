@@ -31,9 +31,35 @@ $result = mysqli_query($conn, $sql);
 
     <title>Blog</title>
     <style>
+        .auth-links {
+            gap: 10px;
+        }
+
+        .create-post-btn,
+        .login-btn,
+        .signup-btn {
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .create-post-btn:hover,
+        .login-btn:hover,
+        .signup-btn:hover {
+            background-color: #f2f2f2;
+        }
+
         h1 {
             text-align: center;
         }
+
         table,
         th,
         td {
@@ -58,9 +84,12 @@ $result = mysqli_query($conn, $sql);
 
 <body>
     <h1>Blog Posts</h1>
-    <a href="create.php">Create New Post</a>
-    <a href="login.php">Login</a>
-    <a href="signup.php">Sign up</a>
+    <p>Create your own blog post here, click on create new post</p>
+    <div class="auth-links">
+        <button><a href="create.php">Create New Post</a></button>
+        <button> <a href="login.php">Login</a></button>
+        <button><a href="signup.php">Sign up</a></button>
+    </div>
     <table>
         <tr>
             <th>Title</th>

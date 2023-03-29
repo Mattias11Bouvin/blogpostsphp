@@ -38,6 +38,43 @@ mysqli_close($conn);
 
 <head>
     <title>Sign Up</title>
+    <style>
+		h2 {
+			text-align: center;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			width: 50%;
+			margin: auto;
+		}
+
+		label {
+			font-weight: bold;
+			margin-bottom: 0.5rem;
+		}
+
+		input[type="text"],
+		textarea {
+			padding: 0.5rem;
+			margin-bottom: 1rem;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+		}
+
+		form input[type="submit"] {
+			background-color: #007bff;
+			color: #fff;
+			padding: 0.5rem 1rem;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+
+		form input[type="submit"]:hover {
+			background-color: #0062cc;
+		}
+	</style>
 </head>
 
 <body>

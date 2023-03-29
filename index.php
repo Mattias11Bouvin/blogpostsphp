@@ -59,6 +59,8 @@ $result = mysqli_query($conn, $sql);
 <body>
     <h1>Blog Posts</h1>
     <a href="create.php">Create New Post</a>
+    <a href="login.php">Login</a>
+    <a href="signup.php">Sign up</a>
     <table>
         <tr>
             <th>Title</th>

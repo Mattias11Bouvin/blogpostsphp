@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		h1 {
 			text-align: center;
 		}
+
 		form {
 			display: flex;
 			flex-direction: column;
@@ -65,6 +66,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		form input[type="submit"]:hover {
 			background-color: #0062cc;
 		}
+
+		input[name="price"] {
+			display: block;
+			width: 30%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+			margin-bottom: 1rem;
+		}
+
+		input[name="price"]:focus {
+			border: 2px solid #4CAF50;
+		}
 	</style>
 
 </head>
@@ -76,6 +93,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<input type="text" name="title"> <br>
 		<label for="content">Content:</label>
 		<textarea name="content" required></textarea><br>
+		<label for="price">Price:</label>
+		<input type="number" name="price" step="0.01" min="0.99" required>
 		<input type="submit" value="Create">
 	</form>
 </body>

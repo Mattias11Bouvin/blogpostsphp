@@ -33,12 +33,14 @@ $result = mysqli_query($conn, $sql);
     <style>
         .auth-links {
             gap: 10px;
+            margin-bottom: 10px;
         }
 
         .create-post-btn,
         .login-btn,
         .signup-btn {
-            background-color: #fff;
+            background-color: black;
+            color: white;
             border: none;
             border-radius: 5px;
             font-size: 16px;
@@ -94,6 +96,7 @@ $result = mysqli_query($conn, $sql);
         <tr>
             <th>Title</th>
             <th>Content</th>
+            <th>Price</th>
             <th>Created At</th>
             <th>Updated At</th>
             <th></th>
@@ -103,10 +106,12 @@ $result = mysqli_query($conn, $sql);
             <tr>
                 <td><?php echo $row['title']; ?></td>
                 <td><?php echo $row['content']; ?></td>
+                <td><?php echo $row['price']; ?></td>
                 <td><?php echo $row['created_at']; ?></td>
                 <td><?php echo $row['updated_at']; ?></td>
                 <td><a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></td>
                 <td><a href="update.php?id=<?php echo $row['id']; ?>">Update</a></td>
+                <td><a href="cart.php?id=<?php echo $row['id']; ?>">Add to cart</a></td>
             </tr>
         <?php } ?>
     </table>
